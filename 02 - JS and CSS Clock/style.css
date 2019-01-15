@@ -150,10 +150,8 @@ body {
   border-radius: 2px;
   box-shadow: 0 0 2px rgba(0, 0, 0, .2);
   transform-origin: 2px 50px;
-  transition: .5s;
-  animation: rotate-hour 43200s linear infinite;
-  -webkit-animation: rotate-hour 43200s linear infinite;
-  -moz-animation: rotate-hour 43200s linear infinite;
+  transform: rotate(360deg);
+  transition: all 0.05s cubic-bezier(0, 0, 0.52, 2.51) 0s
 }
 
 .clock-minute {
@@ -167,10 +165,8 @@ body {
   border-radius: 2px;
   box-shadow: 0 0 2px rgba(0, 0, 0, .2);
   transform-origin: 2px 70px;
-  transition: .5s;
-  animation: rotate-minute 3600s linear infinite;
-  -webkit-animation: rotate-minute 3600s linear infinite;
-  -moz-animation: rotate-minute 3600s linear infinite;
+  transform: rotate(360deg);
+  transition: all 0.05s cubic-bezier(0, 0, 0.52, 2.51) 0s
 }
 
 .clock-second {
@@ -183,10 +179,8 @@ body {
   background-color: hsl(348, 100%, 61%);
   box-shadow: 0 0 2px rgba(0, 0, 0, .2);
   transform-origin: 1px 110px;
-  transition: .5s;
-  animation: rotate-second 60s linear infinite;
-  -webkit-animation: rotate-second 60s linear infinite;
-  -moz-animation: rotate-second 60s linear infinite;
+  transform: rotate(360deg);
+  transition: all 0.05s cubic-bezier(0, 0, 0.52, 2.51) 0s
 }
 
 .clock-second:after {
