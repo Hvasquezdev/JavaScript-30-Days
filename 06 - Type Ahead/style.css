@@ -1,0 +1,116 @@
+html {
+  background-image: radial-gradient(circle, #D7D7D7, #D7D7D7 1px, #FFF 1px, #FFF);
+  background-size: 28px 28px;
+	color: #9c9c9c;
+  font: 1rem "PT Sans", sans-serif;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+input {
+  width: 100%;
+  padding: 20px;
+}
+
+.search-form {
+  max-width: 400px;
+  margin: 50px auto;
+  position: relative;
+}
+
+input.search {
+  margin: 0 0 15px 0;
+  text-align: center;
+  outline: 0;
+  position: relative;
+  top: 10px;
+  z-index: 2;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  background: #ffffff;
+  box-sizing: inherit;
+  width: 100%;
+  background: #fff;
+  color: #a3a3a3;
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+  border: 0;
+  padding: 22px 18px;
+  border: 1px solid #23d160;
+}
+
+.btn {
+	display: inline-block;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	border: 0;
+	outline: 0;
+	padding: 0;
+	transition: all 200ms ease-in;
+  cursor: pointer;
+  position: absolute;
+  z-index: 3;
+  top: 20px;
+  right: -50px;
+}
+
+.btn--primary {
+  background: #ffdd57;
+  color: #353535;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+  border-radius: 15101997px;
+  padding: 12px 36px;
+}
+
+.btn:hover {
+  background-color: #f5d553;
+}
+
+.btn:active {
+  box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+}
+
+.btn--inside {
+  margin-left: -96px;
+}
+
+.suggestions {
+  margin: 0;
+  padding: 0;
+  position: relative;
+} 
+
+.suggestions li {
+  background: #fff;
+  list-style: none;
+  border-bottom: 1px solid #D8D8D8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+  margin: 0;
+  padding: 20px;
+  transition: background 0.2s;
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+
+.suggestions li:nth-child(even) {
+  transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+}
+
+.suggestions li:nth-child(odd) {
+  transform: perspective(100px) rotateX(-3deg) translateY(3px);
+}
+
+span.population {
+  font-size: 15px;
+}
+
+.hl {
+  background-color: #ffdd57;
+}
