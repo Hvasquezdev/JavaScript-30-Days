@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Reference VS Copy</title>
+</head>
+<body>
+
+  <script>
+    // start with strings, numbers and booleans
+    let num = 150;
+    let num2 = num;
+    console.log(num, num2);
+    num = 200;
+    console.log(num, num2);
+
+    // Let's say we have an array
+    const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
+
+    // and we want to make a copy of it.
+    const team = players;
+    console.log(players, team);
+
+    // You might think we can just do something like this:
+    players[3] = 'Lux';
+    console.log(players, team);
+
+    // however what happens when we update that array?
+
+    // now here is the problem!
+
+    // oh no - we have edited the original array too!
+
+    // Why? It's because that is an array reference, not an array copy. They both point to the same array!
+
+    // So, how do we fix this? We take a copy instead!
+    const team2 = players.slice();
+    team2[3] = 'Carl';
+
+    // one way
+
+    // or create a new array and concat the old one in
+    const team3 = [].concat(players);
+    team3[2] = 'Hector';
+
+    // or use the new ES6 Spread
+    const team4 = [...players];
+    team4[1] = 'Jose';
+
+    // and Array.from()
+    const team5 = Array.from(players);
+
+    // now when we update it, the original one isn't changed
+    team5[3] = 'Antonio';
+    console.log(players, team5);
+
+    // The same thing goes for objects, let's say we have a person object
+
+    // with Objects
+    const person = {
+      name: 'Wes Bos',
+      age: 80
+    };
+
+    // and think we make a copy:
+    const captain = person;
+    captain.age = 88;
+    console.log(captain, person);
+
+    // how do we take a copy instead?
+    const cap2 = Object.assign({}, person, { age: 98 });
+    console.log(cap2, person);
+
+    // We will hopefully soon see the object ...spread
+    // const cap3 = {...person};
+
+    // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+    const hector = {
+      name: 'Hector',
+      age: 21,
+      social: {
+        twitter: '@HecTorVasquez97',
+        github: 'Hvasquezdev'
+      }
+    };
+
+    const dev = Object.assign({}, hector);
+    
+    const dev2 = JSON.parse(JSON.stringify(dev));
+
+  </script>
+
+</body>
+</html>
