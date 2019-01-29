@@ -1,0 +1,22 @@
+html {
+  color: hsl(48, 100%, 67%);
+  font-family: sans-serif;
+  background-image: radial-gradient(circle, #D7D7D7, #D7D7D7 1px, #FFF 1px, #FFF);
+  background-size: 28px 28px;
+}
+
+body {
+  margin: 0;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(48, 100%, 67%);
+}
+
+h1 {
+  font-size: 100px;
+}
