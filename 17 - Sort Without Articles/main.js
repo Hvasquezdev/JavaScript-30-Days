@@ -10,4 +10,7 @@ function strip(bandName) {
 
 const sortBand = bands.sort((a, b) => strip(a) > strip(b) ? 1 : -1);
 
-document.querySelector('#bands').innerHTML = sortBand.map(band => `<li>${band}</li>`).join('');
+document.querySelector('#bands').innerHTML = 
+  sortBand
+    .map(band => `<li><a href="#">${band}</a></li>`)
+      .join('');
